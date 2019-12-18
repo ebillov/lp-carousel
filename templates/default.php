@@ -211,9 +211,9 @@
                                 }
                                 $term_link = get_term_link( $cat );
                                 echo '
-                                    <span class="cat_link" link="'. $term_link. '">
+                                    <a class="cat_link" link="'. $term_link. '">
                                         '.$cat->name.'
-                                    </span>
+                                    </a>
                                 ';
                                 if($catCount < count($cats)){
                                     echo '| ';
@@ -256,7 +256,25 @@ jQuery(document).ready(function(){
         autoplaySpeed: 3000,
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 601,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            }
+        ]
     });
 });
 </script>
