@@ -211,7 +211,7 @@
                                 }
                                 $term_link = get_term_link( $cat );
                                 echo '
-                                    <a class="cat_link" link="'. $term_link. '">
+                                    <a href="'. $term_link. '">
                                         '.$cat->name.'
                                     </a>
                                 ';
